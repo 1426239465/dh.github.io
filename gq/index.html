@@ -1,0 +1,224 @@
+<html lang="en">
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width,maximum-scale=1.0,minimum-scale=1.0'>
+  <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+  <title>国庆红旗头像一键生成-觅知博客</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    a:link{color:#fff;text-decoration: none;}
+    a:visited{color:#fff;}
+    #export{display:none;margin:0 auto;width:250px;height:250px;margin-top:50px;margin-bottom:50px}
+    .operation-btns .o-btn1{background-size:11.6rem 4.325rem}
+    .operation-btns .o-btn2{background-size:11.6rem 3.75rem}
+    center{color: #fff;}
+  </style>
+  <link rel="stylesheet" type="text/css" href="static/css/strap.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <img src="" alt="" class="img-load" style="width: 9.5rem; position: fixed; top: 0px; left: -9999px;">
+    <div class="operation-header">
+      <div class="h-title">
+
+      </div>
+    </div>
+    <div class="operation-box">
+      <a class="prev" onclick='changeHat()'></a>
+      <div class="operation-img">
+        <div class="cropper-content" id="content">
+          <canvas class="" id='cvs'></canvas>
+        </div>
+      </div>
+      <a class="next" onclick='changeHat()'></a>
+    </div>
+    <img id='export' alt='国庆专属头像' src=''>
+    <div class="operation-btns">
+      <a class="o-btn1">
+        <input class="o-btn1" id='upload' type='file' onchange='viewer()' style='opacity: 0;'>
+      </a>
+      <a class="o-btn2" onclick='exportFunc()' style="display: none;">
+      </a>
+    </div>
+
+    <div class="operation-done">
+      <img src="static/picture/163275557236523584.png" class="act-done-happy">
+    </div>
+    	<center>
+		  <a href="index.html" target="_blank">【重新生成】</a>
+    </center>
+			<br/>
+				<br/>
+<center>
+      <p>Tips:共60种头像样式</p>
+      <p style="text-indent: 2em; text-align: left;">1.点击“上传照片”按钮，上传头像。</p>
+      <p style="text-indent: 2em; text-align: left;">2.点击“向左”或“向右”按钮，选择自己喜欢的样式。</p>
+      <p style="text-indent: 2em; text-align: left;">3.点击“保存头像”按钮，点击弹出的对话框的确定按钮，</p>
+      <p style="text-indent: 2.5em; text-align: left;">根据对话框提示保存头像。</p>
+    </center>	
+	<br/>
+		<br/>
+			<br/>
+				<br/>
+	<center>
+		  <a href="https://www.98dou.cn/" target="_blank">觅知博客</a>
+    </center>	
+  </div>
+  <div style='display: none'>
+    <img id='img' src='' alt=''>
+    <img class='hide' id='hat0'src='static/picture/hat0.png'>
+    <img class='hide' id='hat1'src='static/picture/hat1.png'>
+    <img class='hide' id='hat2'src='static/picture/hat2.png'>
+    <img class='hide' id='hat3'src='static/picture/hat3.png'>
+    <img class='hide' id='hat4'src='static/picture/hat4.png'>
+    <img class='hide' id='hat5'src='static/picture/hat5.png'>
+    <img class='hide' id='hat6'src='static/picture/hat6.png'>
+    <img class='hide' id='hat7'src='static/picture/hat7.png'>
+    <img class='hide' id='hat8'src='static/picture/hat8.png'>
+    <img class='hide' id='hat9'src='static/picture/hat9.png'>
+    <img class='hide' id='hat10'src='static/picture/hat10.png'>
+    <img class='hide' id='hat11'src='static/picture/hat11.png'>
+    <img class='hide' id='hat12'src='static/picture/hat12.png'>
+    <img class='hide' id='hat13'src='static/picture/hat13.png'>
+    <img class='hide' id='hat14'src='static/picture/hat14.png'>
+    <img class='hide' id='hat15'src='static/picture/hat15.png'>
+    <img class='hide' id='hat16'src='static/picture/hat16.png'>
+    <img class='hide' id='hat17'src='static/picture/hat17.png'>
+    <img class='hide' id='hat18'src='static/picture/hat18.png'>
+    <img class='hide' id='hat19'src='static/picture/hat19.png'>
+    <img class='hide' id='hat20'src='static/picture/hat20.png'>
+    <img class='hide' id='hat21'src='static/picture/hat21.png'>
+    <img class='hide' id='hat22'src='static/picture/hat22.png'>
+    <img class='hide' id='hat23'src='static/picture/hat23.png'>
+    <img class='hide' id='hat24'src='static/picture/hat24.png'>
+    <img class='hide' id='hat25'src='static/picture/hat25.png'>
+    <img class='hide' id='hat26'src='static/picture/hat26.png'>
+    <img class='hide' id='hat27'src='static/picture/hat27.png'>
+    <img class='hide' id='hat28'src='static/picture/hat28.png'>
+    <img class='hide' id='hat29'src='static/picture/hat29.png'>
+    <img class='hide' id='hat30'src='static/picture/hat30.png'>
+    <img class='hide' id='hat31'src='static/picture/hat31.png'>
+    <img class='hide' id='hat32'src='static/picture/hat32.png'>
+    <img class='hide' id='hat33'src='static/picture/hat33.png'>
+    <img class='hide' id='hat34'src='static/picture/hat34.png'>
+    <img class='hide' id='hat35'src='static/picture/hat35.png'>
+    <img class='hide' id='hat36'src='static/picture/hat36.png'>
+    <img class='hide' id='hat37'src='static/picture/hat37.png'>
+    <img class='hide' id='hat38'src='static/picture/hat38.png'>
+    <img class='hide' id='hat39'src='static/picture/hat39.png'>
+    <img class='hide' id='hat40'src='static/picture/hat40.png'>
+    <img class='hide' id='hat41'src='static/picture/hat41.png'>
+    <img class='hide' id='hat42'src='static/picture/hat42.png'>
+    <img class='hide' id='hat43'src='static/picture/hat43.png'>
+    <img class='hide' id='hat44'src='static/picture/hat44.png'>
+    <img class='hide' id='hat45'src='static/picture/hat45.png'>
+    <img class='hide' id='hat46'src='static/picture/hat46.png'>
+    <img class='hide' id='hat47'src='static/picture/hat47.png'>
+    <img class='hide' id='hat48'src='static/picture/hat48.png'>
+    <img class='hide' id='hat49'src='static/picture/hat49.png'>
+    <img class='hide' id='hat50'src='static/picture/hat50.png'>
+    <img class='hide' id='hat51'src='static/picture/hat51.png'>
+    <img class='hide' id='hat52'src='static/picture/hat52.png'>
+    <img class='hide' id='hat53'src='static/picture/hat53.png'>
+    <img class='hide' id='hat54'src='static/picture/hat54.png'>
+    <img class='hide' id='hat55'src='static/picture/hat55.png'>
+    <img class='hide' id='hat56'src='static/picture/hat56.png'>
+    <img class='hide' id='hat57'src='static/picture/hat57.png'>
+    <img class='hide' id='hat58'src='static/picture/hat58.png'>	
+  </div>
+<script src="static/js/fabric.min.js"></script>
+<script>
+  var cvs = document.getElementById("cvs");
+  var ctx = cvs.getContext("2d");
+  var exportImage = document.getElementById("export");
+  var img = document.getElementById("img");
+  var hat = "hat0";
+  var canvasFabric;
+  var hatInstance;
+  //var screenWidth = window.screen.width < 500 ? window.screen.width : 300;
+  var screenWidth = document.getElementById("content").scrollHeight;
+  function viewer() {
+    var file = document.getElementById("upload").files[0];
+    console.log(file);
+    var reader = new FileReader;
+    if (file) {
+      reader.readAsDataURL(file);
+      reader.onload = function(e) {
+        img.src = reader.result;
+        img.onload = function() {
+          img2Cvs(img)
+        }
+      }
+    } else {
+      img.src = ""
+    }
+  }
+  function img2Cvs(img) {
+    cvs.width = img.width;
+    cvs.height = img.height;
+    cvs.style.display = "block";
+    canvasFabric = new fabric.Canvas("cvs", {
+      width: screenWidth,
+      height: screenWidth,
+      backgroundImage: new fabric.Image(img, {
+        scaleX: screenWidth / img.width,
+        scaleY: screenWidth / img.height
+      })
+    });
+    changeHat();
+
+    document.getElementsByClassName("o-btn1")[0].style.display = "none";
+    document.getElementsByClassName("o-btn2")[0].style.display = "block";
+    //document.getElementById("tip").style.opacity = 1
+  }
+  function changeHat() {
+    document.getElementById(hat).style.display = "none";
+    var hats = document.getElementsByClassName("hide");
+    hat = "hat" + (+hat.replace("hat", "") + 1) % hats.length;
+    var hatImage = document.getElementById(hat);
+    hatImage.style.display = "block";
+    if (hatInstance) {
+      canvasFabric.remove(hatInstance)
+    }
+    console.log(hatImage.width);
+    console.log(100 / hatImage.width);
+    hatInstance = new fabric.Image(hatImage, {
+      top: 0,
+      left: 0,
+      scaleX: screenWidth / hatImage.width,
+      scaleY: screenWidth / hatImage.height,
+      cornerColor: "#0b3a42",
+      cornerStrokeColor: "#fff",
+      cornerStyle: "circle",
+      transparentCorners: false,
+      rotatingPointOffset: 30
+    });
+    hatInstance.setControlVisible("bl", false);
+    hatInstance.setControlVisible("tr", false);
+    hatInstance.setControlVisible("tl", false);
+    hatInstance.setControlVisible("mr", false);
+    hatInstance.setControlVisible("mt", false);
+    canvasFabric.add(hatInstance)
+  }
+  function exportFunc() {
+    document.getElementsByClassName("operation-box")[0].style.display = "none";
+    document.getElementsByClassName("operation-btns")[0].style.display = "none";
+
+    /*document.getElementById("exportBtn").style.display = "none";
+    document.getElementById("tip").innerHTML = "长按图片保存或分享";
+    document.getElementById("change").style.display = "none";*/
+    cvs.style.display = "none";
+    exportImage.style.display = "block";
+    exportImage.src = canvasFabric.toDataURL({
+      width: screenWidth,
+      height: screenWidth
+    });
+    alert('长按图片保存或分享');
+  }
+  
+
+</script>
+<div style="display:none;"><script type="text/javascript" src="static/js/z_stat-1279954851_1279954851.js"></script></div>
+
+</body>
+</html>
